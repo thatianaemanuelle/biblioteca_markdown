@@ -8,14 +8,14 @@ describe("index", function() {
 
     describe("Quando nao houver parametro deve lancar um erro.", function() {
       it("Lançar um erro.", () => {
-        expect(() => index.getLinksFromMd()).to.throw("Parameter not found. You must enter a parameter");
-        expect(() => index.getLinksFromMd("")).to.throw("Parameter not found. You must enter a parameter");
+        expect(() => index.getLinksFromMd()).to.throw("Parametro não encontrado.");
+        expect(() => index.getLinksFromMd("")).to.throw("Parametro não encontrado.");
       });
     });
 
     describe("Quando o texto for um numero deve lancar um erro.", function() {
       it("Lançar um erro.", () => {
-        expect(() => index.getLinksFromMd(468)).to.throw("Numbers are not allowed. Insert a text");
+        expect(() => index.getLinksFromMd(468)).to.throw("Não aceita numeros.");
       });
     });
 

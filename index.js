@@ -1,10 +1,10 @@
 function getLinksFromMd(text) {
   if (text === "" || text === undefined) {
-    throw new Error("Parâmetro não encontrado.");
+    throw new Error("Parametro não encontrado.");
   }
 
   if (typeof text !== "string" || typeof text === "number") {
-    throw new Error("Digite textos, números não são permitidos.");
+    throw new Error("Não aceita numeros.");
   } else {
     var expected = [];
     let exportUrl = new RegExp (/(((http|https):\/{2})?(www.)?([a-z0-9-]+\.){1,2})([a-z]{2,3}(\/([\w\?\=\&\%\@\.\-\_\!\#]*\/*)*\b|\b))/g);
