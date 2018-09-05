@@ -1,24 +1,23 @@
 function getLinksFromMd(text) {
   if (text === "" || text === undefined) {
-    throw new Error("Parâmetro não encontrado. Isira um parâmetro.");
+    throw new Error("Parâmetro não encontrado.");
   }
 
   if (typeof text !== "string" || typeof text === "number") {
-    throw new Error("Numbers are not allowed. Insert a text");
+    throw new Error("Digite textos, números não são permitidos.");
   } else {
-    var result = [];
+    var expected = [];
     let exportUrl = new RegExp (/(((http|https):\/{2})?(www.)?([a-z0-9-]+\.){1,2})([a-z]{2,3}(\/([\w\?\=\&\%\@\.\-\_\!\#]*\/*)*\b|\b))/g);
     let exportpText = new RegExp (/(?<=\[)([a-z0-9]*)(?=\])/g);
-    let urls = text.match(exportpUrl);
-    let mdText = text.match(exportText);
+    let urls = text.match(exportUrl);
+    let mdText = text.match(exportpText);
     if (mdText !== null && urls !== null) {
-      result = urls.map((url, i) => ({
+      expected = urls.map((url, i) => ({
         href: url,
         text: mdText[i]
       }));
     }
-    return urls ? result : [];
+    return urls ? expected : [];
   }
 };
 module.exports.getLinksFromMd = getLinksFromMd;
-

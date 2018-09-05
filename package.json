@@ -1,0 +1,30 @@
+{
+  "name": "biblioteca_markdown",
+  "version": "1.0.0",
+  "description": "Biblioteca Markdown trabalho final sprint 4 Laboratoria",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thatianaemanuelle/biblioteca_markdown.git"
+  },
+  "author": "Thatiana Emanuelle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thatianaemanuelle/biblioteca_markdown/issues"
+  },
+  "homepage": "https://github.com/thatianaemanuelle/biblioteca_markdown#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "nyc": "^13.0.1"
+  }
+}
