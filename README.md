@@ -1,4 +1,4 @@
-# Extrair links de arquivo markdown (Node.js) v 1.0.1
+# Extrair links de arquivo markdown (Node.js) v 1.0.3
 
 Essa versão retorna um array com uma url e texto.
 
@@ -12,7 +12,7 @@ Exemplo:
     > let getLinks = require("biblioteca_markdown")
     > getLinks.getLinksFromMd ("Oi você quer entrar no site [google] (www.google.com)?"); // [{href: "www.google.com", texto: "google"}]
 
-## Version 1.0.1
+## Version 1.0.3
 
 - Funcionalidades: extrair links e texto do markdown
 
@@ -30,7 +30,7 @@ Exemplo:
 
 ## Roadmap do projeto
 
-#### Versão 1.0.1 (released)
+#### Versão 1.0.3 (released)
 
 - Funcionalidades: extrair links e texto do markdown
 
