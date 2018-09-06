@@ -6,18 +6,18 @@ function getLinksFromMd(text) {
   if (typeof text !== "string" || typeof text === "number") {
     throw new Error("Não aceita numeros.");
   } else {
-    let expected;
-    let exportUrl = new RegExp ("(((http|https):\/{2})?(www.)?([a-z0-9-]+\.){1,2})([a-z]{2,3}(\/([\w\?\=\&\%\@\.\-\_\!\#]*\/*)*\b|\b))", g);
-    let exportpText = new RegExp ("(?<=\[)([a-z0-9]*)(?=\])", g);
-    let urls = text.match(exportUrl);
-    let mdText = text.match(exportpText);
-    if (mdText !== null && urls !== null) {
-      expected = urls.map((url, i) => ({
+    var result = [];
+    let regExportUrl = new RegExp(/(((http|https):\/{2})?(www.)?([a-z0-9-]+\.){1,2})([a-z]{2,3}(\/([\w\?\=\&\%\@\.\-\_\!\#]*\/*)*\b|\b))/gi);
+    let regExportText = new RegExp(/(?<=\[)([a-z0-9]*)(?=\])/gi);
+    let urlSite = text.match(regExportUrl);
+    let textMD = text.match(regExportText);
+    if (textMD !== null && urlSite !== null) {
+      result = urlSite.map((url, i) => ({
         href: url,
-        text: mdText[i]
+        text: textMD[i]
       }));
     }
-    return urls ? expected : [];
+    return urlSite ? result : [];
   }
 };
 module.exports.getLinksFromMd = getLinksFromMd;
